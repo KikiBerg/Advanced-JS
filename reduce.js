@@ -66,7 +66,5 @@ console.log(namesByProf);
 
 // If there were 100 employees and 20 different professions, you would want to filter out only the ones in a specific profession and find the one with the most experience
 let specificProf = "Developer"; // Change this to the profession you want to filter by
-let mostExpInProf = teamMembers
-  .filter((member) => member.profession === specificProf)
-  .reduce((acc, curr) => (curr.yrsExperience > acc.yrsExperience ? curr : acc));
+let mostExpInProf = teamMembers.filter(member => member.profession === specificProf).reduce((acc,curr)=>curr.yrsExperience>acc.yrsExperience?curr:acc);
 console.log(mostExpInProf);
